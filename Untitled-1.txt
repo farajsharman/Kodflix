@@ -1,0 +1,28 @@
+(Hello Peter)
+function getWelcomeMessage(userName) {
+    return `Hello ${userName}`;
+
+('Plato, Aristotle)
+function getArrayIndexes(array) {     
+    let indexes = [] ;
+    for(let index in array) {
+        indexes.push(index);
+    }    
+    return indexes;
+
+
+(Mick Doohan)
+function getKeys(user) {
+   return object.keys(user);
+}
+returns an array of the keys as a comma sperated list the keys will be strings
+
+function tripleOddNumber(number) {
+    return number % 2 === 1 ?
+        number * 3 :
+        number;
+}        
+
+
+
+}    
