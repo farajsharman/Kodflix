@@ -1,7 +1,40 @@
+img {
+  display: block;
+}
 .App {
-  text-align: center;
+  text-align: center
 }
 
- img {
-   width: 100%;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
 }
+
+.item {
+  position: relative;  
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.overlay {
+  transition: bottom ease 1s;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  opacity: 0.6;
+  background-color:gray;
+
+}
+
+.item:hover .overlay {
+  opacity:6;
+  bottom:0;
+}  
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    flex-direction: column;
+  }
+}   
