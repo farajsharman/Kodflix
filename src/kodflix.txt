@@ -1,0 +1,40 @@
+React training
+
+Score Details
+
+function ScoreDetails(props) {
+    let scores = props.scores;
+    return (
+        <div>
+            <label className='total'>Total: {scores.length}</label>
+            <label className='first'>First: {scores[0]}</labe>}
+            <label className='seconds'>Seconds: {scores[1]}</label>
+        </div>
+    };    
+}    
+
+premier League fixture
+
+function PremierLeagueFixtures() {
+    return (
+        <div className='fixtures'>
+            <div className='fixture'>
+                <div className='team1'>Tottenham</div>
+                <div className='team2'>Southampton</div>
+                <div className='result'>3-1</div>
+            </div>     
+        </div>
+    );
+
+    Michael jORDAN
+
+    function BasketballStar() {
+        return (
+            <div>
+                <label className='firstName'>Michael</label>
+                <label className='lastName'>Jordan</label>
+            </div>
+        );
+    }                    
+
+Welcome    
