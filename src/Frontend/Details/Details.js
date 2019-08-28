@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import getGallery from "../gallery-get.js";
-
+// import "./Details.css";
 export default class Details extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +19,11 @@ export default class Details extends Component {
     //   return tvshow.id === tvshowid;
     // }),name;
     tvShow
-      ? this.setState({ title: tvShow.name, details: tvShow.details, cover: tvShow.cover })
+      ? this.setState({
+          title: tvShow.name,
+          details: tvShow.details,
+          cover: tvShow.cover
+        })
       : this.setState({ title: undefined });
   }
 
@@ -28,12 +32,16 @@ export default class Details extends Component {
       return <Redirect to="/not-found" />;
     }
     return (
-      <div>
+      <div className="Details">
         <h1>{this.state.title}</h1>
-        <div>{this.state.details}</div>
-        <img
+        <div className="container">
+          <div className="text">{this.state.details}</div>
+          <img
+            className="image"
             src={this.state.cover}
-            alt={this.state.title} />
+            alt={this.state.title}
+          />
+        </div>
         <Link to="/">Back to home page</Link>
       </div>
     );

@@ -1,16 +1,15 @@
-
-  body {
-    text-align: center;
-    background-color: #2f333d;
-    color: white;
-    min-height: 100%;
-  } 
+body {
+  text-align: center;
+  background-color: #2f333d;
+  color: white;
+  min-height: 100%;
+}
 
 img {
   display: block;
 }
 .App {
-  text-align: center
+  text-align: center;
 }
 
 .container {
@@ -19,7 +18,7 @@ img {
 }
 
 .item {
-  position: relative;  
+  position: relative;
   border: 1px solid black;
   overflow: hidden;
 }
@@ -31,19 +30,16 @@ img {
   left: 0;
   width: 100%;
   opacity: 0.6;
-  background-color:gray;
-
+  background-color: gray;
 }
 
 .item:hover .overlay {
-  opacity:6;
-  bottom:0;
-}  
-
+  opacity: 6;
+  bottom: 0;
+}
 
 @media only screen and (max-width: 600px) {
-
   .container {
     flex-direction: column;
   }
-}   
+}
