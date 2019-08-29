@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const getGallery = require('./shows');
 const path = require('path')
-const port = process.env.Port || 3001;
+const port = process.env.PORT || 3001;
 app.get('/rest/shows', (req, res) => res.send(getGallery()));
 app.listen(3001, () => console.log('Example app listening on port 3000!')); 
 // Serve any static files
