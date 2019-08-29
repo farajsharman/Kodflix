@@ -12,13 +12,15 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start":"npm-run-all -s build start-backend",
+    "start":"npm-run-all -s build _start-backend",
     "start-frontend": "react-scripts start",
     "start-dev": "npm-run-all -p start-frontend start-backend",
     "start-backend": "nodemon src/Backend/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom", 
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "_start-backend": "node src/Backend/app.js",
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,8 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    
   }
 }
