@@ -1,17 +1,18 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,useState} from 'react';
 import TvShows from './Tv_shows';
-import getGallery from './gallery-get'
+// import getGallery from './gallery-get'
 // export default class Gallery extends React.Component {
 
   
 function Gallery() {
+  const [gallery, setGallery] = useState([]);
   useEffect(() => {
     fetch('/rest/shows')
         .then(function (response) {
             return response.json();
         })
         .then(function (myJson) {
-            console.log(myJson);
+            setGallery(myJson)
         });
   });
 
@@ -19,7 +20,8 @@ function Gallery() {
     <div>
       <div className='container'>
         {
-          getGallery().map(tvshows => (
+          gallery.map(tvshows => (
+            
             <TvShows
               key={tvshows.id}
               id={tvshows.id}
