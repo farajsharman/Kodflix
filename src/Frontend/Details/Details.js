@@ -13,7 +13,7 @@ export default function Details({ match }) {
                 let show = shows.find(show => show.id === showId);
                 setShow( show );
     });
-  }, []);
+  }, [match.params.showId]);
     
     // let tvshowtitle = getGallery().find(function (tvshow) {
     //   return tvshow.id === tvshowid;
@@ -28,9 +28,8 @@ export default function Details({ match }) {
 
     if (show === undefined) {
       return <Redirect to="/not-found" />;
-    } else if (show === {}) {
-      return <div />;
-    }
+    } 
+    else if (show.id) {
       return (
         <div className="Details">
           <h1>{show.title}</h1>
@@ -38,11 +37,13 @@ export default function Details({ match }) {
             <div className="text">{show.synopsis}</div>
             <img
               className="image"
-              src={require('./common/images/${show.title}.jpg')}
+              src={require(`../common/images/${show.id}.jpg`)}
               alt={show.title}
             />
           </div>
           <Link to="/">Back to home page</Link>
         </div>
       );
+    }
+    return <div></div>;
   }
