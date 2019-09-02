@@ -38,7 +38,7 @@ export default function Details({ match }) {
             <div className="text">{show.synopsis}</div>
             <img
               className="image"
-              src={require(`../common/images/${show.title}.jpg`)}
+              src={require('./common/images/${show.title}.jpg')}
               alt={show.title}
             />
           </div>
@@ -46,4 +46,3 @@ export default function Details({ match }) {
         </div>
       );
   }
-
