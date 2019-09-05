@@ -4,8 +4,10 @@ body {
   color: white;
   min-height: 100%;
 }
-
-img {
+#root, .App, .App > * {
+  height: 100%;
+}
+  img {
   display: block;
 }
 .App {
@@ -38,8 +40,29 @@ img {
   bottom: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loader {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-loader {
+  border: 16px solid #272c36;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
